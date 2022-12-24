@@ -1,0 +1,23 @@
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\bin\Debug\Dota HotKeys.exe.config
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\bin\Debug\Dota HotKeys.exe
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\bin\Debug\Dota HotKeys.pdb
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\bin\Debug\Guna.UI2.dll
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\obj\Debug\Dota_HotKeys.frmMain.resources
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\obj\Debug\Dota_HotKeys.Properties.Resources.resources
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\obj\Debug\Dota HotKeys.csproj.GenerateResource.cache
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\obj\Debug\Dota HotKeys.csproj.CoreCompileInputs.cache
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\obj\Debug\Dota HotKeys.csproj.CopyComplete
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\obj\Debug\Dota HotKeys.exe
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\obj\Debug\Dota HotKeys.pdb
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\bin\Debug\Guna.UI.dll
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\bin\Debug\UIDC.dll
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\obj\Debug\Dota_HotKeys.frmSettings.resources
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\obj\Debug\Dota_HotKeys.frm.Settings1.resources
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\obj\Debug\Dota_HotKeys.frm.Settings2.resources
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\obj\Debug\Dota_HotKeys.frm.Heroes.resources
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\obj\Debug\Dota_HotKeys.frm.Log.resources
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\obj\Debug\Dota_HotKeys.frm.ComboManager.resources
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\obj\Debug\Dota HotKeys.csproj.AssemblyReference.cache
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\obj\Debug\Dota HotKeys.csproj.SuggestedBindingRedirects.cache
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\obj\Debug\Dota_HotKeys.frmAlert.resources
+C:\Users\Yangel\source\repos\Dota HotKeys\Dota HotKeys\bin\Debug\AutoHotkey.Interop.pdb

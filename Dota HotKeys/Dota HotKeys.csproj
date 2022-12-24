@@ -1,0 +1,720 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE69073C-438E-42ED-A526-E1DD0EAED559}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Dota_HotKeys</RootNamespace>
+    <AssemblyName>Dota HotKeys</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Dota Launcher.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoHotkey.Interop, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Downloads\Compressed\AutoHotkey.Interop-1.0\src\AutoHotkey.Interop\bin\Debug\AutoHotkey.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>D:\Yangel\Utiles\Proyectos\KosmoPack\KosmoPlayer\KosmoPlayer\bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>D:\Yangel\Utiles\Proyectos\ejemplos\C# UI Academy\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>D:\Yangel\Utiles\Proyectos\ejemplos\C# UI Academy\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Shortcut, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Shortcut.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIDC">
+      <HintPath>D:\Yangel\Utiles\Proyectos\ejemplos\C# UI Academy\UIDC.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\Confi.cs" />
+    <Compile Include="Class\modCommon.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\ComboManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm\ComboManager.Designer.cs">
+      <DependentUpon>ComboManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Heroes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm\Heroes.Designer.cs">
+      <DependentUpon>Heroes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Log.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm\Log.Designer.cs">
+      <DependentUpon>Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Notifi\frmAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm\Notifi\frmAlert.Designer.cs">
+      <DependentUpon>frmAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Settings1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm\Settings1.Designer.cs">
+      <DependentUpon>Settings1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm\Settings2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frm\Settings2.Designer.cs">
+      <DependentUpon>Settings2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hero\Abaddom.cs" />
+    <Compile Include="Hero\Alchemist.cs" />
+    <Compile Include="Hero\Ancient Apparition.cs" />
+    <Compile Include="Hero\Anti-Mage.cs" />
+    <Compile Include="Hero\Ark Warden.cs" />
+    <Compile Include="Hero\Axe.cs" />
+    <Compile Include="Hero\Bane.cs" />
+    <Compile Include="Hero\Batrider.cs" />
+    <Compile Include="Hero\Beastmaster.cs" />
+    <Compile Include="Hero\Bloodseaker.cs" />
+    <Compile Include="Hero\Bounty Hunter.cs" />
+    <Compile Include="Hero\Brewmaster.cs" />
+    <Compile Include="Hero\Bristleback.cs" />
+    <Compile Include="Hero\Broodmother.cs" />
+    <Compile Include="Hero\Centaur Warrunner.cs" />
+    <Compile Include="Hero\Chaos Knight.cs" />
+    <Compile Include="Hero\Chen.cs" />
+    <Compile Include="Hero\Clinkz.cs" />
+    <Compile Include="Hero\Clockwerk.cs" />
+    <Compile Include="Hero\Crystal Maiden.cs" />
+    <Compile Include="Hero\Dark Seer.cs" />
+    <Compile Include="Hero\Dark Willow.cs" />
+    <Compile Include="Hero\Dawmbreaker.cs" />
+    <Compile Include="Hero\Dazzle.cs" />
+    <Compile Include="Hero\Death Prophet.cs" />
+    <Compile Include="Hero\Disruptor.cs" />
+    <Compile Include="Hero\Doom.cs" />
+    <Compile Include="Hero\Dragon Knight.cs" />
+    <Compile Include="Hero\Drow Ranger.cs" />
+    <Compile Include="Hero\Earth Spirit.cs" />
+    <Compile Include="Hero\Earthshaker.cs" />
+    <Compile Include="Hero\Elden Titan.cs" />
+    <Compile Include="Hero\Ember Spirit.cs" />
+    <Compile Include="Hero\Enchantress.cs" />
+    <Compile Include="Hero\Enigma.cs" />
+    <Compile Include="Hero\Faceless Void.cs" />
+    <Compile Include="Hero\Grimstroke.cs" />
+    <Compile Include="Hero\Gyrocopter.cs" />
+    <Compile Include="Hero\Hoodwink.cs" />
+    <Compile Include="Hero\Huskar.cs" />
+    <Compile Include="Hero\Invoker.cs" />
+    <Compile Include="Hero\Io.cs" />
+    <Compile Include="Hero\Jakiro.cs" />
+    <Compile Include="Hero\Juggernaut.cs" />
+    <Compile Include="Hero\Keeper of the Light.cs" />
+    <Compile Include="Hero\Kunkka.cs" />
+    <Compile Include="Hero\Legion Commander.cs" />
+    <Compile Include="Hero\Leshrac.cs" />
+    <Compile Include="Hero\Lich.cs" />
+    <Compile Include="Hero\Lifesteales.cs" />
+    <Compile Include="Hero\Lina.cs" />
+    <Compile Include="Hero\Lion.cs" />
+    <Compile Include="Hero\Lone Druid.cs" />
+    <Compile Include="Hero\Luna.cs" />
+    <Compile Include="Hero\Lycan.cs" />
+    <Compile Include="Hero\Magnus.cs" />
+    <Compile Include="Hero\Marci.cs" />
+    <Compile Include="Hero\Mars.cs" />
+    <Compile Include="Hero\Medusa.cs" />
+    <Compile Include="Hero\Meepo.cs" />
+    <Compile Include="Hero\Mirana.cs" />
+    <Compile Include="Hero\Monkey Knight.cs" />
+    <Compile Include="Hero\Morphling.cs" />
+    <Compile Include="Hero\Naga Siren.cs" />
+    <Compile Include="Hero\Nature%27s Prophet.cs" />
+    <Compile Include="Hero\Necrophos.cs" />
+    <Compile Include="Hero\Night Stalker.cs" />
+    <Compile Include="Hero\Nyx Assassin.cs" />
+    <Compile Include="Hero\Ogre Magi.cs" />
+    <Compile Include="Hero\Omniknight.cs" />
+    <Compile Include="Hero\Oracle.cs" />
+    <Compile Include="Hero\Outword Destroyer.cs" />
+    <Compile Include="Hero\Pangolier.cs" />
+    <Compile Include="Hero\Phantom Assassin.cs" />
+    <Compile Include="Hero\Phantom Lancer.cs" />
+    <Compile Include="Hero\Phoenix.cs" />
+    <Compile Include="Hero\Puck.cs" />
+    <Compile Include="Hero\Pudge.cs" />
+    <Compile Include="Hero\Pugna.cs" />
+    <Compile Include="Hero\Queen of Pain.cs" />
+    <Compile Include="Hero\Razor.cs" />
+    <Compile Include="Hero\Riki.cs" />
+    <Compile Include="Hero\Rubick.cs" />
+    <Compile Include="Hero\Sand Knight.cs" />
+    <Compile Include="Hero\Shadow Demon.cs" />
+    <Compile Include="Hero\Shadow Fiend.cs" />
+    <Compile Include="Hero\Shadow Shaman.cs" />
+    <Compile Include="Hero\Silencer.cs" />
+    <Compile Include="Hero\Skywrath Magi.cs" />
+    <Compile Include="Hero\Slardar.cs" />
+    <Compile Include="Hero\Slark.cs" />
+    <Compile Include="Hero\Snapfire.cs" />
+    <Compile Include="Hero\Sniper.cs" />
+    <Compile Include="Hero\Spectre.cs" />
+    <Compile Include="Hero\Spirit Breaker.cs" />
+    <Compile Include="Hero\Storm Spirit.cs" />
+    <Compile Include="Hero\Sven.cs" />
+    <Compile Include="Hero\Techies.cs" />
+    <Compile Include="Hero\Templar Assassin.cs" />
+    <Compile Include="Hero\Terrorblade.cs" />
+    <Compile Include="Hero\Tidehunter.cs" />
+    <Compile Include="Hero\Timbersaw.cs" />
+    <Compile Include="Hero\Tinker.cs" />
+    <Compile Include="Hero\Tiny.cs" />
+    <Compile Include="Hero\Treant Protector.cs" />
+    <Compile Include="Hero\Troll Warlord.cs" />
+    <Compile Include="Hero\Tusk.cs" />
+    <Compile Include="Hero\Underlord.cs" />
+    <Compile Include="Hero\Undying.cs" />
+    <Compile Include="Hero\Ursa.cs" />
+    <Compile Include="Hero\Vengeful Spirit.cs" />
+    <Compile Include="Hero\Venomancer.cs" />
+    <Compile Include="Hero\Viper.cs" />
+    <Compile Include="Hero\Visage.cs" />
+    <Compile Include="Hero\Void Spirit.cs" />
+    <Compile Include="Hero\Warlock.cs" />
+    <Compile Include="Hero\Weaver.cs" />
+    <Compile Include="Hero\Windranger.cs" />
+    <Compile Include="Hero\Winter Wyvern.cs" />
+    <Compile Include="Hero\Witch Doctor.cs" />
+    <Compile Include="Hero\Wraith Knight.cs" />
+    <Compile Include="Hero\Zeus.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\ComboManager.resx">
+      <DependentUpon>ComboManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Heroes.resx">
+      <DependentUpon>Heroes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Log.resx">
+      <DependentUpon>Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Notifi\frmAlert.resx">
+      <DependentUpon>frmAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Settings1.resx">
+      <DependentUpon>Settings1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm\Settings2.resx">
+      <DependentUpon>Settings2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Scripts\shortcut.min.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SClose1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SClose2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\M3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\46.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\47.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\49.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\52.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\53.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\54.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\56.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\57.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\58.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\59.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\61.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\62.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\63.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\65.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\66.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\67.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\68.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\69.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\71.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\73.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\74.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\75.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\76.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\77.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\78.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\79.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\81.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\82.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\83.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\84.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\85.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\86.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\87.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\88.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\89.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\90.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\91.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\92.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\93.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\94.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\95.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\97.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\98.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\99.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\101.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\102.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\103.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\104.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\105.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\106.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\107.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\108.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\109.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\110.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\112.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\113.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\114.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\115.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\116.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\117.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\118.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\119.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\120.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\122.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agility.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inteligence.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Strength.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Left1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Left2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rigth1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rigth2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\powertread.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_roshan.png" />
+    <Content Include="Dota Launcher.ico" />
+    <Content Include="Scripts\shortcut.js" />
+    <Content Include="Scripts\shortcut.min.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
